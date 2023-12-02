@@ -5,5 +5,72 @@ p {
     background-color: aquamarine;
     margin: 10px;
     padding: 20px;
+}
 
+/* フォームｃｓｓ */
+
+.form{
+    width: 500px;
+    background-color: #1F2937;
+    color: #fff;
+    padding: 10px;
+}
+.form-title{
+    margin-left: 35px;
+}
+.table{
+    margin: 0 auto;
+}
+.sub-title{
+    display: inline-block;
+    font-size: 10px;
+}
+.mail{
+    font-size: 20px;
+    display: block;
+}
+.password{
+    font-size: 20px;
+    display: block;    
+}
+.maill-form{
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 400px;
+    background-color: #374151;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.password-form{
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 400px;
+    background-color: #374151;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.button{
+    min-width: 400px;
+    color: #fff;
+    background-color:#2463EB;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+.form-attention{
+    background-color: #1F2937;
+    color: #fff;
+    font-size: 10px;
+}
+.form-signup{
+    text-decoration: none;
+    color: #2463EB;
 }
