@@ -17,29 +17,71 @@
 
 const $doc = document;
 // console.log($doc);
-const $mailForm = $doc.getElementById('Your email');
-const $passForm = $doc.getElementById('Password');
+let $mailForm = $doc.getElementById('Your email');
+let $passForm = $doc.getElementById('Password');
 const $button = $doc.getElementById('button');
 
-let address = $mailForm.value;
-let password = $passForm.value;
-// データの保存
+// console.log($mailForm);
+
+$button.addEventListener('click' , () =>{
+
+    //クリックされたらローカルリポジトリに保存する命令を書く
+    let $mailValue = $mailForm.value;
+    let $passFormValue = $passForm.value;
+
+    localStorage.setItem('address', $mailValue);
+    localStorage.setItem('password', $passValue);
+
+});
+
+//データの保存
 // localStorage.setItem('address', address);
 // localStorage.setItem('password', password);
 
-//クリックされたらローカルリポジトリに保存する命令を書く
-$button.addEventListener('click' , () =>{
+let address = localStorage.getItem('address');
+let password = localStorage.getItem('password');
 
-    localStorage.setItem('address', $mailForm.value);
-    localStorage.setItem('password', $passForm.value);
-});
+// //データ取り出す
 
-//データ取り出す
-address = localStorage.getItem('address');
-password = localStorage.getItem('password');
+if(address){
+    $mailForm.value = address;
+}
 
-if($mailForm.addEventListener('click' ,() => {
+if(password){
+    $passForm.value = password;
+}
 
-} )) {
-    console.log(address);
-};
+
+
+
+
+// const $doc = document;
+// const $mailForm = $doc.getElementById('Your email');
+// const $passForm = $doc.getElementById('Password');
+// const $button = $doc.getElementById('button');
+
+// // ローカルストレージからデータを取得してフォームに設定
+// const storedAddress = localStorage.getItem('address');
+// const storedPassword = localStorage.getItem('password');
+
+// if (storedAddress) {
+//     $mailForm.value = storedAddress;
+// }
+
+// if (storedPassword) {
+//     $passForm.value = storedPassword;
+// }
+
+// // クリックされたらローカルストレージに保存する命令を書く
+// $button.addEventListener('click', () => {
+//     // ボタンがクリックされたときにフォームの値を取得
+//     const address = $mailForm.value;
+//     const password = $passForm.value;
+
+//     // ローカルストレージに値を保存
+//     localStorage.setItem('address', address);
+//     localStorage.setItem('password', password);
+// });
+
+
+
