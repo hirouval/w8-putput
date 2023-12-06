@@ -27,7 +27,7 @@ $button.addEventListener('click' , () =>{
 
     //クリックされたらローカルリポジトリに保存する命令を書く
     let $mailValue = $mailForm.value;
-    let $passFormValue = $passForm.value;
+    let $passValue = $passForm.value;
 
     localStorage.setItem('address', $mailValue);
     localStorage.setItem('password', $passValue);
